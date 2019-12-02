@@ -10,6 +10,7 @@ public class CalculatriceTest {
 	public void test() {
 		//throw new RuntimeException("Erreur"); // Error= crash par exception
 		//fail("Not yet implemented"); // Failure= échec du test 
+		assertEquals(7, Calculatrice.additionne(3,4));
 	}
 
 }
