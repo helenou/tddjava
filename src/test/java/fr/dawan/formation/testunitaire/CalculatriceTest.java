@@ -8,7 +8,8 @@ public class CalculatriceTest {
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+		//throw new RuntimeException("Erreur"); // Error= crash par exception
+		//fail("Not yet implemented"); // Failure= échec du test 
 	}
 
 }
