@@ -51,6 +51,12 @@ public class CalculatriceTest {
 		
 	}
 	
+	@Test(timeout=10)
+	public void divisionTimeOut() throws InterruptedException{
+		Thread.currentThread().sleep(100);
+		Calculatrice.divise(2, 0);
+		
+	}
 	
 
 }
