@@ -11,6 +11,7 @@ public class CalculatriceTest {
 		//throw new RuntimeException("Erreur"); // Error= crash par exception
 		//fail("Not yet implemented"); // Failure= échec du test 
 		assertEquals(7, Calculatrice.additionne(3,4));
+		assertEquals(7, Calculatrice.additionne(-3,40)); // return value1+value2 instead of 7 so FAIL
 	}
 
 }
