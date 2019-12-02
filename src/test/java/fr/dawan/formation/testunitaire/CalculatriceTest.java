@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import fr.dawan.formation.testunitaire.exceptions.DivisionParZeroException;
+
 public class CalculatriceTest {
 
 	@Test
@@ -29,5 +31,26 @@ public class CalculatriceTest {
 		// 2e solution, corriger le code
 		assertEquals(2147483648L,  Calculatrice.additionne(Integer.MAX_VALUE, 1)); // Change code return type to long
 	}
+	
+	@Test
+	public void divisionTest() {
+		// Pour l'assertion d'égalité sur des doubles, utiliser un delta (approx du résultat)
+		//assertEquals(2.0, 20, 0.01);
+		
+		assertEquals(2, Calculatrice.divise(6, 3), 0.001);
+		assertEquals(-2, Calculatrice.divise(-6, 3), 0.001);
+		assertEquals(-3.5, Calculatrice.divise(-7, 2), 0.001);
+				
+		assertEquals(0, Calculatrice.divise(0, 2), 0.001);
+		//assertEquals(Double.POSITIVE_INFINITY, Calculatrice.divise(2, 0), 0.001);
+	}
+	
+	@Test(expected=DivisionParZeroException.class)
+	public void divisionParZeroTest() {
+		Calculatrice.divise(2, 0);
+		
+	}
+	
+	
 
 }
