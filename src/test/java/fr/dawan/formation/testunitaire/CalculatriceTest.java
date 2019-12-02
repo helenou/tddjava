@@ -1,15 +1,40 @@
 package fr.dawan.formation.testunitaire;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
+import org.junit.After;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import fr.dawan.formation.testunitaire.exceptions.DivisionParZeroException;
 
 public class CalculatriceTest {
 
+	
+	@BeforeClass
+	public static void initClass() {
+		System.out.println("INITIALISATION");
+	}
+	
+	@BeforeClass
+	public static void cleanFinal() {
+		System.out.println("Nettoyage Final");
+	}
+	
+	@Before
+	public void init() {
+		System.out.println("Initialisation avant chaque test");
+	}
+	
+	@After
+	public void cleanUp() {
+		System.out.println("Nettoyage après chaque test");
+	}
+	
 	@Test
-	public void test() {
+	public void additionTest() {
+		System.out.println("additionTest");
 		//throw new RuntimeException("Erreur"); // Error= crash par exception
 		//fail("Not yet implemented"); // Failure= échec du test 
 		
@@ -34,6 +59,7 @@ public class CalculatriceTest {
 	
 	@Test
 	public void divisionTest() {
+		System.out.println("divisionTest");
 		// Pour l'assertion d'égalité sur des doubles, utiliser un delta (approx du résultat)
 		//assertEquals(2.0, 20, 0.01);
 		
@@ -47,12 +73,14 @@ public class CalculatriceTest {
 	
 	@Test(expected=DivisionParZeroException.class)
 	public void divisionParZeroTest() {
+		System.out.println("divisionParZeroTest");
 		Calculatrice.divise(2, 0);
 		
 	}
 	
 	@Test(timeout=10)
 	public void divisionTimeOut() throws InterruptedException{
+		System.out.println("divisionTimeOutTest");
 		Thread.currentThread().sleep(100);
 		Calculatrice.divise(2, 0);
 		
