@@ -21,7 +21,7 @@ public class CalculatriceTest {
 		
 		// tests aux limites
 		System.out.println(Integer.MAX_VALUE); // 2147483647
-		assertEquals(2147483647,  Calculatrice.additionne(Integer.MAX_VALUE, 1)); // -2147483648
+		assertEquals(Integer.MIN_VALUE,  Calculatrice.additionne(Integer.MAX_VALUE, 1)); // -2147483648
 		
 	}
 
