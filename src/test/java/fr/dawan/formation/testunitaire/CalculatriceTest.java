@@ -19,6 +19,9 @@ public class CalculatriceTest {
 		// Test de valeurs clés
 		assertEquals(100000, Calculatrice.additionne(0, 100000));
 		
+		// tests aux limites
+		System.out.println(Integer.MAX_VALUE); // 2147483647
+		assertEquals(2147483647,  Calculatrice.additionne(Integer.MAX_VALUE, 1)); // -2147483648
 		
 	}
 
