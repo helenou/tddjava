@@ -10,8 +10,16 @@ public class CalculatriceTest {
 	public void test() {
 		//throw new RuntimeException("Erreur"); // Error= crash par exception
 		//fail("Not yet implemented"); // Failure= échec du test 
+		
+		// Test du cas nominal
 		assertEquals(7, Calculatrice.additionne(3,4));
-		assertEquals(7, Calculatrice.additionne(-3,40)); // return value1+value2 instead of 7 so FAIL
+		assertEquals(37, Calculatrice.additionne(-3,40)); // return value1+value2 instead of 7 so FAIL, expect 37 !
+		
+		
+		// Test de valeurs clés
+		assertEquals(100000, Calculatrice.additionne(0, 100000));
+		
+		
 	}
 
 }
