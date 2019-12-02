@@ -16,5 +16,22 @@ public class Calculatrice {
 		return (double)value1 / value2;
 		
 	}
+	
+	// Returns 0, 1, 1, 2, 3, 5, 8, 13
+	// f(n) = f(n-1) + f(n-2)
+	
+	// f(0)=0; f(1)=1; // exceptions
+	public static int fibonacci(int n) {
+		int resultat= 0;
+		
+		if(n <= 1) {
+			resultat = n;
+		}else {
+			resultat = fibonacci(n-1) + fibonacci(n-2);
+		}
+	
+		return resultat;
+		
+	}
 
 }
