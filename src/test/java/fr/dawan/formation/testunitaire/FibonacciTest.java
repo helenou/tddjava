@@ -39,5 +39,11 @@ public class FibonacciTest {
 		assertEquals(donneeEnSortie, Calculatrice.fibonacci(donneeEnEntree));
 
 	}
+	
+	
+	@Test
+	public void test2() {
+		System.out.println(donneeEnEntree +" " +donneeEnSortie);
+	}
 
 }
