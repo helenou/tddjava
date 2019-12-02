@@ -21,8 +21,13 @@ public class CalculatriceTest {
 		
 		// tests aux limites
 		System.out.println(Integer.MAX_VALUE); // 2147483647
-		assertEquals(Integer.MIN_VALUE,  Calculatrice.additionne(Integer.MAX_VALUE, 1)); // -2147483648
 		
+		// 1ere solution, corriger le test
+		//assertEquals(2147483647,  Calculatrice.additionne(Integer.MAX_VALUE, 1)); // expecting -214748364
+		//assertEquals(Integer.MIN_VALUE, Calculatrice.additionne(Integer.MAX_VALUE, 1)); // corrigé
+		
+		// 2e solution, corriger le code
+		assertEquals(2147483648L,  Calculatrice.additionne(Integer.MAX_VALUE, 1)); // Change code return type to long
 	}
 
 }
